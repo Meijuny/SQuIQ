@@ -58,6 +58,10 @@ summary(CoRegulation_fit3, fit.measures=T, standardized=T)
 ############## CFA for factor 2: Sensitive Responsivity  #######################
 ################################################################################
 
+##reverse the SQuIQ19 & SQuIQ20 scale
+SQuIQ_data$SQuIQ19<-5-SQuIQ_data$SQuIQ19
+SQuIQ_data$SQuIQ20<-5-SQuIQ_data$SQuIQ20
+
 ##start the first model for Sensitive Responsivity based on the EFA results
 SensitiveResponsivity_MM1<-'
 SensitiveResponsivity=~SQuIQ14+SQuIQ28+SQuIQ22+SQuIQ19+SQuIQ20+SQuIQ12+SQuIQ13+SQuIQ11+SQuIQ21
