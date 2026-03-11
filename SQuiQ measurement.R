@@ -1,4 +1,5 @@
 library(lavaan)
+library(dplyr)
 
 ##read the data in:
 SQuIQ_data<-read.csv("./Data_Surveystudy_62p_19122024.csv")
@@ -126,3 +127,5 @@ ContactStability_fit1<-cfa(data = SQuIQ_data,
 summary(ContactStability_fit1, fit.measures=T, standardized=T)
 
 ##The fit is good, select this as the final model
+
+
